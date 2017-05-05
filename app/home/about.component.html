@@ -1,0 +1,21 @@
+<div class="panel panel-primary">
+    <div class="panel-heading">
+        <h1 class="text-center">{{pageTitle}}</h1>
+    </div>
+    <div class="panel-body"  >
+        <div class="row"  >
+             <p class="text-center">
+                  <button (click)='showInfoClick()'>Show info</button>
+                  <!--<button (click)='showInfoClick()'>
+                     {{ (showInfo? 'hide': 'show')  }}   info
+                    </button>--> 
+             </p>
+            <div *ngIf="showInfo" >
+                <div *ngFor="let i of info"> <!-- prøv at flytte ngFor ned i p -->
+                    <p  class="text-center">{{i}}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
